@@ -114,10 +114,6 @@ private extension Configurator {
   }
   func setupRepo(context: inout Context) throws {
     if context.git.lfs { try gitHandleVoid(context.git.updateLfs) }
-    try (context.env["GITLAB_CI"] != nil)
-      .then(makeFetchUrl(git: context.git, env: context.env))
-      .map(context.git.addRemote(url:))
-      .map(gitHandleVoid)
     try gitHandleVoid(context.git.fetch)
     context.git.report.userName = try? gitHandleLine(context.git.userName)
     context.git.report.headSha = try? gitHandleLine(context.git.headSha)
