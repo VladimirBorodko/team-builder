@@ -23,8 +23,8 @@ public extension Git {
   }
   func cat(file: Git.File) throws -> Git.HandleCat {
     .init(tasks: [
-      PipeTask(arguments: root.base + ["show", "\(file.ref.value):\(file.path.path)"]),
-      PipeTask(surpassStdErr: true, arguments: root.base + ["lfs", "smudge"]),
+      .init(arguments: root.base + ["show", "\(file.ref.value):\(file.path.path)"]),
+      .init(surpassStdErr: true, arguments: root.base + ["lfs", "smudge"]),
     ])
   }
   var userName: HandleLine {

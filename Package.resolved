@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "Utility",
+        "repositoryURL": "https://github.com/VladimirBorodko/Utility",
+        "state": {
+          "branch": null,
+          "revision": "2a677871396eda203fb3f3b6d7c3d6e035b7892a",
+          "version": "0.5.0"
+        }
+      },
+      {
         "package": "Yams",
         "repositoryURL": "https://github.com/jpsim/Yams.git",
         "state": {

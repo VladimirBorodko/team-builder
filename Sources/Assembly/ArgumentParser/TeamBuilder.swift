@@ -21,7 +21,7 @@ struct TeamBuilder: ParsableCommand {
       CheckFileRules.self,
     ]
   )
-  static let version = "0.0.1"
+  static let version = "0.0.2"
   struct CheckUnownedCode: TeamBuilderCommand {
     @OptionGroup var arguments: TeamBuilder
     static var name: String { "check-unowned-code" }
